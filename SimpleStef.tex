@@ -1,0 +1,72 @@
+%Hey, if you're using this preamble it means that it was probably written by Stefano Graziosi (me). If you see something that doesn't make sense, feel free to email me at stefano.graziosi@studbocconi.it
+
+%I don't own copyright on anything, I just literally copied and pasted together a bunch of stuff.
+
+%Credit goes to the original authors.
+
+%------------------------------------------------------------------------------
+%           Packages
+%------------------------------------------------------------------------------
+
+\usepackage[all]{xy}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}    
+\usepackage{wrapfig}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{halloweenmath}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\usepackage{titlepic}
+\usepackage{pdfpages}
+
+%------------------------------------------------------------------------------
+%           Environments
+%------------------------------------------------------------------------------
+
+%Standard \latex box
+
+\newtcolorbox{mybox}[3][]
+{
+  colframe = #2!25,
+  colback  = #2!10,
+  coltitle = #2!20!black,  
+  title    = {#3},
+  #1,
+}
+
+%Standard "Problem" environment
+
+\newtheorem{problem}{Problem}
+
+%Personalised "Solution" environment
+
+\newenvironment{solution}[1][\it{Solution}]{\textbf{#1. } }{$\square$}
+
+%------------------------------------------------------------------------------
+%           Code Listing Environment
+%------------------------------------------------------------------------------
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
